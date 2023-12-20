@@ -1,19 +1,30 @@
-﻿namespace TechnicalMaintenanceMiddleware_Sample.CustomMiddlewares
+﻿    using Microsoft.Extensions.Options;
+using TechnicalMaintenanceMiddleware_Sample.Configurations;
+
+namespace TechnicalMaintenanceMiddleware_Sample.CustomMiddlewares
 {
     // You may need to install the Microsoft.AspNetCore.Http.Abstractions package into your project
     public class TechnicalWorkMiddleware
     {
         private readonly RequestDelegate _next;
+        private readonly TechnicalWorkConfiguration _technicalWorkConfiguration;
 
-        public TechnicalWorkMiddleware(RequestDelegate next)
+        public TechnicalWorkMiddleware(RequestDelegate next, IOptions<TechnicalWorkConfiguration> technicalWorkConfiguration)
         {
             _next = next;
+            _technicalWorkConfiguration = technicalWorkConfiguration.Value;
         }
 
-        public Task Invoke(HttpContext httpContext)
+        public async Task Invoke(HttpContext httpContext)
         {
+            if (_technicalWorkConfiguration.IsTechnicalWorkInProgress)
+            {
+                httpContext.Response.StatusCode = StatusCodes.Status403Forbidden;
+                await httpContext.Response.WriteAsync("Technical work in progress. Access is prohibited.");
+                return;
+            }
 
-            return _next(httpContext);
+            await _next(httpContext);
         }
     }
 

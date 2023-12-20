@@ -1,3 +1,5 @@
+using TechnicalMaintenanceMiddleware_Sample.Configurations;
+using TechnicalMaintenanceMiddleware_Sample.CustomMiddlewares;
 
 namespace TechnicalMaintenanceMiddleware_Sample
 {
@@ -8,13 +10,16 @@ namespace TechnicalMaintenanceMiddleware_Sample
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.Configure<TechnicalWorkConfiguration>(builder.Configuration.GetSection("TechnicalWork"));
+
             var app = builder.Build();
+
+            app.UseMiddleware<TechnicalWorkMiddleware>();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -24,7 +29,6 @@ namespace TechnicalMaintenanceMiddleware_Sample
             }
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 
