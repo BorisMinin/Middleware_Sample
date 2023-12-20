@@ -5,6 +5,11 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechnicalMaintenanceMiddleware_Sample", "TechnicalMaintenanceMiddleware_Sample\TechnicalMaintenanceMiddleware_Sample.csproj", "{3234DF94-8B1E-4859-9D0E-F95ED0B4D740}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{CA6A517B-640B-4403-9B75-4CB68F1E5285}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\boris\Downloads\AddCustomMiddleware.pdf = C:\Users\boris\Downloads\AddCustomMiddleware.pdf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
