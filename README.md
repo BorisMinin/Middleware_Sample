@@ -62,5 +62,6 @@ To learn more about creating custom middleware, see the Used links section
 ## Used links
 **Create custom middleware:**
 https://www.tutorialsteacher.com/core/how-to-add-custom-middleware-aspnet-core
+
 **IOptions pattern**
 https://andrewlock.net/how-to-use-the-ioptions-pattern-for-configuration-in-asp-net-core-rc2/
