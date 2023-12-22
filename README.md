@@ -8,8 +8,6 @@ The Middleware_Sample application is a basic c# middleware implementation that c
 
 If in _appsettings.json_ configuration file IsTechnicalWorkInProgress is marked as true, this means that some technical work is being carried out on the service and access to the Web API is denied.
 
-
-
 ## Installation
 To run the AttributesSample application, follow these steps:
 
@@ -20,8 +18,8 @@ To run the AttributesSample application, follow these steps:
 
 ## Usage
 To use the Web API, you need to try out several scenarios:
-1. In the _appsettings.json_ configuration file specify the _true_ value for the IsTechnicalWorkInProgress key, which will signal the ongoing technical work on the service. In this case, when you start the project, you will receive an error message
-2. In the _appsettings.json_ configuration file specify the _false_ value for the IsTechnicalWorkInProgress key, which will signal that no technical work is currently being carried out on the service. In this case, when you start the project, swagger will be launched and you will be able to use endpoints
+1. In the _appsettings.json_ configuration file specify the _true_ value for the IsTechnicalWorkInProgress key, which will signal the ongoing technical work on the service. In this case, when you start the project, you will receive an error message.
+2. In the _appsettings.json_ configuration file specify the _false_ value for the IsTechnicalWorkInProgress key, which will signal that no technical work is currently being carried out on the service. In this case, when you start the project, swagger will be launched and you will be able to use endpoints.
 
 First scenario: 
 
@@ -30,7 +28,6 @@ First scenario:
 Second scenario:
 
 ![Second scenario](https://github.com/BorisMinin/Middleware_Sample/assets/32355926/a387493b-fc29-48eb-a5d6-509a940af6f2)
-
 
 _appsettings.json_ configuration file:
 
@@ -57,7 +54,7 @@ The implementation of any technical requirements using middleware is performed i
         await _next(httpContext);
     }
 ```
-To learn more about creating custom middleware, see the Used links section
+To learn more about creating custom middleware, see the Used links section.
 
 ## Used links
 **Create custom middleware:**
