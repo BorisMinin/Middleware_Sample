@@ -1,7 +1,7 @@
-﻿    using Microsoft.Extensions.Options;
-using TechnicalMaintenanceMiddleware_Sample.Configurations;
+﻿using Microsoft.Extensions.Options;
+using Middleware_Sample.Configurations;
 
-namespace TechnicalMaintenanceMiddleware_Sample.CustomMiddlewares
+namespace Middleware_Sample.CustomMiddlewares
 {
     // You may need to install the Microsoft.AspNetCore.Http.Abstractions package into your project
     public class TechnicalWorkMiddleware

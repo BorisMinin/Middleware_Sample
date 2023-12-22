@@ -1,4 +1,4 @@
-namespace TechnicalMaintenanceMiddleware_Sample
+namespace Middleware_Sample
 {
     public class WeatherForecast
     {

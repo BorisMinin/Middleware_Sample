@@ -1,0 +1,6 @@
+@Middleware_Sample = http://localhost:5168
+
+GET {{Middleware_Sample}}/weatherforecast/
+Accept: application/json
+
+###

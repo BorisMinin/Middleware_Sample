@@ -1,4 +1,4 @@
-﻿namespace TechnicalMaintenanceMiddleware_Sample.Configurations
+﻿namespace Middleware_Sample.Configurations
 {
     /// <summary>
     /// Configuration for technical work (IOptions pattern)

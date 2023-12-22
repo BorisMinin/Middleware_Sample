@@ -1,7 +1,7 @@
-using TechnicalMaintenanceMiddleware_Sample.Configurations;
-using TechnicalMaintenanceMiddleware_Sample.CustomMiddlewares;
+using Middleware_Sample.Configurations;
+using Middleware_Sample.CustomMiddlewares;
 
-namespace TechnicalMaintenanceMiddleware_Sample
+namespace Middleware_Sample
 {
     public class Program
     {
