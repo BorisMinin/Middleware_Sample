@@ -20,10 +20,21 @@ To run the AttributesSample application, follow these steps:
 
 ## Usage
 To use the Web API, you need to try out several scenarios:
-1. In the _appsettings configuration file.json_ specify the _true_ value for the IsTechnicalWorkInProgress key, which will signal the ongoing technical work on the service. In this case, when you start the project, you will receive an error message
-2. In the _appsettings configuration file.json_ specify the _false_ value for the IsTechnicalWorkInProgress key, which will signal that no technical work is currently being carried out on the service. In this case, when you start the project, swagger will be launched and you will be able to use endpoints
+1. In the _appsettings.json_ configuration file specify the _true_ value for the IsTechnicalWorkInProgress key, which will signal the ongoing technical work on the service. In this case, when you start the project, you will receive an error message
+2. In the _appsettings.json_ configuration file specify the _false_ value for the IsTechnicalWorkInProgress key, which will signal that no technical work is currently being carried out on the service. In this case, when you start the project, swagger will be launched and you will be able to use endpoints
+
+First scenario: 
+
+![First scenario](https://github.com/BorisMinin/Middleware_Sample/assets/32355926/69bc5aa5-9d2b-437b-b576-9d58b9c5f005)
+
+Second scenario:
+
+![Second scenario](https://github.com/BorisMinin/Middleware_Sample/assets/32355926/a387493b-fc29-48eb-a5d6-509a940af6f2)
+
+
+_appsettings.json_ configuration file:
+
 ```JSON
-// is technical work being carried out at the moment
 "TechnicalWork": {
   "IsTechnicalWorkInProgress": true
 }
